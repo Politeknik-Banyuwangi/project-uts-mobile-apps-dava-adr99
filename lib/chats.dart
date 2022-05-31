@@ -13,11 +13,7 @@ class Chats extends StatelessWidget {
           return true;
         },
         child: ListView(
-          children: [
-            SizedBox(
-              height: 10,
-            ),
-          ],
+          children: [],
         ),
       ),
       floatingActionButton: FloatingActionButton(
