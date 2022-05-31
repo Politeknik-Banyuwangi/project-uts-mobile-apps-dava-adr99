@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ui_whatsapp/widgets/CardChats.dart';
 
 class Chats extends StatelessWidget {
   const Chats({Key? key}) : super(key: key);
@@ -13,7 +14,10 @@ class Chats extends StatelessWidget {
           return true;
         },
         child: ListView(
-          children: [],
+          children: [
+            CardsChat(),
+            CardsChat(),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
