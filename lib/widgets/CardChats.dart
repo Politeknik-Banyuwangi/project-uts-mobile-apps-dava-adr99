@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CardsChats extends StatelessWidget {
-  const CardsChats({Key? key}) : super(key: key);
+  //Membuat Variabel
+  final String _name;
+  final String _message;
+  final String _time;
+
+  const CardsChats(this._name, this._message, this._time);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +17,7 @@ class CardsChats extends StatelessWidget {
         radius: 30.0,
       ),
       title: Text(
-        'Anda',
+        '${this._name}',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       subtitle: Row(
@@ -24,10 +29,10 @@ class CardsChats extends StatelessWidget {
           SizedBox(
             width: 3.0,
           ),
-          Text('Tugasmu urung mari dap'),
+          Text('${this._message}'),
         ],
       ),
-      trailing: Text('18.00'),
+      trailing: Text('${this._time}'),
     );
   }
 }
