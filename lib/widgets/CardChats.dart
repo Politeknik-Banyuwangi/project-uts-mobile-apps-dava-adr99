@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class CardsChats extends StatelessWidget {
   //Membuat Variabel
   final String _name;
+  final String _profilImage;
   final String _message;
   final String _time;
 
-  const CardsChats(this._name, this._message, this._time);
+  const CardsChats(this._name, this._profilImage, this._message, this._time);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
-        backgroundImage: NetworkImage(
-            "https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg"),
+        backgroundImage: NetworkImage("${this._profilImage}"),
         radius: 30.0,
       ),
       title: Text(

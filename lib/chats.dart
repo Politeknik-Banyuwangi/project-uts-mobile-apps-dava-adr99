@@ -18,8 +18,18 @@ class Chats extends StatelessWidget {
               height: 10,
             ),
             // koidngan dimulai
-            CardsChats(),
-            CardsChats(),
+            CardsChats(
+              'Megachan',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaccnq_SPHGQezkJDnxmVc1BzOQiWA3XX40A&usqp=CAU',
+              'Tugas yok Tugas',
+              '09.00',
+            ),
+            CardsChats(
+              'JokoKun',
+              'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg',
+              'Yok Semangat Dapa Kun',
+              '10.00',
+            ),
           ],
         ),
       ),
