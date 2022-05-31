@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CardsChat extends StatelessWidget {
-  const CardsChat({Key? key}) : super(key: key);
+class CardsChats extends StatelessWidget {
+  const CardsChats({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
