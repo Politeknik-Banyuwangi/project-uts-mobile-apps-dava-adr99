@@ -12,9 +12,19 @@ class CardsChats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(
-        backgroundImage: NetworkImage("${this._profilImage}"),
-        radius: 30.0,
+      leading: Container(
+        height: 40,
+        width: 40,
+        decoration: BoxDecoration(
+          color: Colors.grey,
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
+          image: DecorationImage(
+            image: NetworkImage('${this._profilImage}'),
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
       title: Text(
         '${this._name}',
