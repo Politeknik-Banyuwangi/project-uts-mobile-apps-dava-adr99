@@ -2,24 +2,58 @@ import 'package:flutter/material.dart';
 
 class CardsCalls extends StatelessWidget {
   // Menambahkan variabel atau atribut
-  // String _name;
-  // String _message;
-  // String _time;
+  final String _name;
+  final String _time;
+  final String _profilImage;
+  final String _calls;
+  final String _actionCalls;
 
-  const CardsCalls({Key? key}) : super(key: key);
+  const CardsCalls(this._name, this._time, this._profilImage, this._calls,
+      this._actionCalls);
+
+  Icon checkPanggilan(
+    calls,
+  ) {
+    Icon icon = new Icon(
+      Icons.video_call,
+      color: Colors.green,
+    );
+    if (calls == 'call') {
+      icon = Icon(
+        Icons.call,
+        color: Colors.green,
+      );
+    } else {
+      icon = Icon(
+        Icons.video_call,
+        color: Colors.green,
+      );
+    }
+    ;
+    return icon;
+  }
+
+  Color checkAksiPanggilan(actionCalls) {
+    Color color = Colors.red;
+    if (actionCalls == 'accept') {
+      color = Colors.green;
+    } else {
+      color = Colors.red;
+    }
+    return color;
+  }
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
-        backgroundImage: NetworkImage(
-            "https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg"),
+        backgroundImage: NetworkImage("${this._profilImage}"),
         radius: 30.0,
       ),
       title: Padding(
         padding: EdgeInsets.only(bottom: 4.0),
         child: Text(
-          'SomeOne',
+          '${this._name}',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18.0,
@@ -30,24 +64,21 @@ class CardsCalls extends StatelessWidget {
         children: [
           Icon(
             Icons.south_west,
-            color: Colors.green,
+            color: checkAksiPanggilan(this._actionCalls),
             size: 16.0,
           ),
           SizedBox(
             width: 3.0,
           ),
           Text(
-            '24 menit yang lalu',
+            '${this._time}',
             style: TextStyle(
               fontSize: 16.0,
             ),
           ),
         ],
       ),
-      trailing: Icon(
-        Icons.videocam,
-        color: Colors.green,
-      ),
+      trailing: checkPanggilan(this._calls),
     );
   }
 }
