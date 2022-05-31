@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ui_whatsapp/widgets/CardCalls.dart';
 
 class Calls extends StatelessWidget {
   const Calls({Key? key}) : super(key: key);
@@ -20,12 +19,20 @@ class Calls extends StatelessWidget {
             ),
 
             // Masukkan Coding disini jangan rubah lainnya
-            //
-            //
-            //
-            //
-            //
-            //
+            CardsCalls(
+              'John',
+              'Hari ini jam 18.00',
+              'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg',
+              'call',
+              'accept',
+            ),
+            CardsCalls(
+              'Mega-chan',
+              'Hari ini jam 00.00',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaccnq_SPHGQezkJDnxmVc1BzOQiWA3XX40A&usqp=CAU',
+              'video call',
+              'reject',
+            ),
           ],
         ),
       ),
