@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_whatsapp/widgets/CardChats.dart';
 
@@ -15,8 +14,12 @@ class Chats extends StatelessWidget {
         },
         child: ListView(
           children: [
-            CardsChat(),
-            CardsChat(),
+            SizedBox(
+              height: 10,
+            ),
+            // koidngan dimulai
+            CardsChats(),
+            CardsChats(),
           ],
         ),
       ),
